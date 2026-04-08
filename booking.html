@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Tiket</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Header -->
+  <header class="py-8 bg-gradient-to-r from-green-400 to-blue-500 text-white text-center shadow-md">
+    <h1 class="text-3xl font-bold">Booking Tiket Wisata</h1>
+    <p class="mt-2 text-lg">Isi form berikut untuk memesan tiket</p>
+  </header>
+
+  <!-- Form Pemesanan -->
+  <section class="py-12 px-6">
+    <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
+
+      <form id="bookingForm" class="space-y-6">
+        <!-- Nama Pengunjung -->
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2" for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" required
+                 class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2" for="email">Email</label>
+          <input type="email" id="email" name="email" required
+                 class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+
+        <!-- Destinasi & Harga -->
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2" for="destinasi">Destinasi</label>
+          <select id="destinasi" name="destinasi" required
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <option value="">-- Pilih Destinasi --</option>
+            <option value="rinjani" data-harga="150000">Gunung Rinjani (Rp150.000)</option>
+            <option value="senggigi" data-harga="100000">Pantai Senggigi (Rp100.000)</option>
+            <option value="selat-lombok" data-harga="120000">Selat Lombok (Rp120.000)</option>
+          </select>
+        </div>
+
+        <!-- Jumlah Tiket -->
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2" for="jumlah">Jumlah Tiket</label>
+          <input type="number" id="jumlah" name="jumlah" min="1" max="10" required
+                 class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+
+        <!-- Total Harga -->
+        <div class="text-gray-700 text-lg font-semibold">
+          Total Harga: <span id="totalHarga">Rp0</span>
+        </div>
+
+        <!-- Tanggal Kunjungan -->
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2" for="tanggal">Tanggal Kunjungan</label>
+          <input type="date" id="tanggal" name="tanggal" required
+                 class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+
+        <!-- Tombol Submit -->
+        <div class="text-center">
+          <button type="submit" 
+                  class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition-colors">
+            Pesan Tiket
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Bubble Pemesanan Berhasil -->
+  <div id="successBubble" 
+       class="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg opacity-0 transition-opacity duration-500">
+    Pemesanan Berhasil!
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-200 text-center text-gray-700 mt-12">
+    &copy; 2026 Pariwisata Mataram & Lombok. All Rights Reserved.
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const destinasiSelect = document.getElementById('destinasi');
+    const jumlahInput = document.getElementById('jumlah');
+    const totalHargaSpan = document.getElementById('totalHarga');
+    const bookingForm = document.getElementById('bookingForm');
+    const successBubble = document.getElementById('successBubble');
+
+    // Update total harga saat destinasi atau jumlah berubah
+    function updateTotal() {
+      const harga = destinasiSelect.selectedOptions[0]?.dataset.harga || 0;
+      const jumlah = parseInt(jumlahInput.value) || 0;
+      totalHargaSpan.textContent = `Rp${harga * jumlah}`;
+    }
+
+    destinasiSelect.addEventListener('change', updateTotal);
+    jumlahInput.addEventListener('input', updateTotal);
+
+    // Submit form
+    bookingForm.addEventListener('submit', function(e){
+      e.preventDefault(); // supaya halaman tidak reload
+      // Tampilkan bubble sukses
+      successBubble.style.opacity = '1';
+      setTimeout(()=> { successBubble.style.opacity = '0'; }, 3000);
+
+      // Reset form (opsional)
+      bookingForm.reset();
+      totalHargaSpan.textContent = 'Rp0';
+    });
+  </script>
+
+</body>
+</html>

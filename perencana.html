@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Perencana Perjalanan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav class="bg-blue-600 text-white p-4">
+  <div class="flex flex-wrap gap-3 text-sm">
+    <a href="./index.html">Home</a>
+    <a href="./destinasi.html">Destinasi</a>
+    <a href="./aktivitas.html">Aktivitas</a>
+    <a href="./budaya.html">Budaya</a>
+    <a href="./kuliner.html">Kuliner</a>
+    <a href="./perencana.html">Perencana</a>
+  </div>
+</nav>
+
+<!-- JUDUL -->
+<section class="p-6 text-center">
+  <h1 class="text-3xl font-bold">Perencana Perjalanan</h1>
+  <p class="text-gray-600">Informasi penting sebelum berkunjung ke Mataram</p>
+</section>
+
+<!-- ISI -->
+<section class="p-6 grid md:grid-cols-2 gap-4">
+
+  <div class="bg-white p-4 rounded shadow">
+  
+  <h2 onclick="toggleTransport()" class="font-bold text-lg mb-2 cursor-pointer">
+    ✈️ Transportasi (klik)
+  </h2>
+
+  <div id="transportDetail" class="hidden">
+    <ul class="list-disc ml-4">
+      <li>Bandara Lombok International Airport</li>
+      <li>Taksi & ojek online tersedia</li>
+      <li>Rental motor & mobil</li>
+      <li>Transportasi umum terbatas</li>
+    </ul>
+  </div>
+
+</div>
+
+  <div class="bg-white p-4 rounded shadow mt-4">
+  
+  <h2 onclick="toggleUang()" class="font-bold text-lg mb-2 cursor-pointer">
+    💰 Mata Uang (klik)
+  </h2>
+
+  <div id="uangDetail" class="hidden">
+    <ul class="list-disc ml-4">
+      <li>Mata uang: Rupiah (IDR)</li>
+      <li>Tersedia ATM di banyak tempat</li>
+      <li>Bisa bayar pakai cash & e-wallet</li>
+      <li>Kartu debit/kredit diterima di hotel & restoran</li>
+    </ul>
+  </div>
+
+</div>
+
+  <div class="bg-white p-4 rounded shadow mt-4">
+  
+  <h2 onclick="toggleInternet()" class="font-bold text-lg mb-2 cursor-pointer">
+    📶 Internet (klik)
+  </h2>
+
+  <div id="internetDetail" class="hidden">
+    <ul class="list-disc ml-4">
+      <li>WiFi tersedia di hotel, cafe, dan tempat wisata</li>
+      <li>Bisa beli SIM card lokal (Telkomsel, XL, Indosat)</li>
+      <li>Jaringan cukup cepat di kota</li>
+      <li>Beberapa daerah wisata sinyal bisa terbatas</li>
+    </ul>
+  </div>
+
+</div>
+
+  <div class="bg-white p-4 rounded shadow mt-4">
+  
+  <h2 onclick="toggleCuaca()" class="font-bold text-lg mb-2 cursor-pointer">
+    🌦️ Cuaca (klik)
+  </h2>
+
+  <div id="cuacaDetail" class="hidden">
+    <ul class="list-disc ml-4">
+      <li>Iklim tropis (panas sepanjang tahun)</li>
+      <li>Musim kemarau: April - Oktober</li>
+      <li>Musim hujan: November - Maret</li>
+      <li>Suhu rata-rata: 25°C - 32°C</li>
+    </ul>
+  </div>
+
+</div>
+
+</section>
+<script>
+function toggleTransport() {
+  document.getElementById("transportDetail").classList.toggle("hidden");
+}
+</script>
+<script>
+function toggleTransport() {
+  document.getElementById("transportDetail").classList.toggle("hidden");
+}
+
+function toggleUang() {
+  document.getElementById("uangDetail").classList.toggle("hidden");
+}
+</script>
+<script>
+function toggleTransport() {
+  document.getElementById("transportDetail").classList.toggle("hidden");
+}
+
+function toggleUang() {
+  document.getElementById("uangDetail").classList.toggle("hidden");
+}
+
+function toggleInternet() {
+  document.getElementById("internetDetail").classList.toggle("hidden");
+}
+</script>
+<script>
+function toggleTransport() {
+  document.getElementById("transportDetail").classList.toggle("hidden");
+}
+
+function toggleUang() {
+  document.getElementById("uangDetail").classList.toggle("hidden");
+}
+
+function toggleInternet() {
+  document.getElementById("internetDetail").classList.toggle("hidden");
+}
+
+function toggleCuaca() {
+  document.getElementById("cuacaDetail").classList.toggle("hidden");
+}
+</script>
+</body>
+</html>

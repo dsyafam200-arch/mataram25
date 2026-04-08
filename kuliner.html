@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuliner - Mataram</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav class="bg-blue-600 text-white p-4 fixed w-full top-0 z-50 shadow-md">
+  <div class="flex justify-between items-center max-w-6xl mx-auto">
+    <h1 class="font-bold text-xl">Mataram</h1>
+    <ul class="flex gap-4 text-sm">
+      <li><a href="index.html" class="hover:underline">Home</a></li>
+      <li><a href="destinasi.html" class="hover:underline">Destinasi</a></li>
+      <li><a href="aktivitas.html" class="hover:underline">Aktivitas</a></li>
+      <li><a href="budaya.html" class="hover:underline">Budaya</a></li>
+      <li><a href="kuliner.html" class="hover:underline font-semibold">Kuliner</a></li>
+      <li><a href="booking.html" class="hover:underline">Booking</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="pt-24"></div>
+
+<!-- JUDUL -->
+<section class="p-6 text-center" data-aos="fade-up" data-aos-duration="1200">
+  <h1 class="text-3xl md:text-4xl font-bold mb-2">Kuliner Khas Mataram</h1>
+  <p class="text-gray-600 text-lg md:text-xl">Makanan khas yang wajib dicoba</p>
+</section>
+
+<!-- KULINER -->
+<section class="max-w-6xl mx-auto p-6 space-y-8">
+
+  <!-- KULINER 1 -->
+  <div class="bg-white rounded shadow-lg p-6 grid md:grid-cols-2 gap-6 items-center hover:scale-105 transition transform" data-aos="fade-up">
+    <img src="taliwang.jpg" alt="Ayam Taliwang" class="w-full h-64 object-cover rounded">
+    <div>
+      <h2 class="text-2xl font-bold mb-2">Ayam Taliwang</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Ayam Taliwang adalah makanan khas Lombok yang terkenal dengan rasa pedas dan bumbu yang kaya rempah. Biasanya disajikan dengan plecing kangkung dan nasi putih hangat, menjadikannya menu wajib dicoba bagi wisatawan.
+      </p>
+    </div>
+  </div>
+
+  <!-- KULINER 2 -->
+  <div class="bg-white rounded shadow-lg p-6 grid md:grid-cols-2 gap-6 items-center hover:scale-105 transition transform" data-aos="fade-up" data-aos-delay="100">
+    <div>
+      <h2 class="text-2xl font-bold mb-2">Bebalung</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Bebalung adalah masakan khas Lombok berupa sup tulang iga sapi, kerbau, atau kambing yang dimasak dengan bumbu rempah tradisional. Hidangan ini memiliki cita rasa gurih dan sedikit pedas. Biasanya disajikan panas bersama nasi putih, dipercaya dapat menambah stamina tubuh.
+      </p>
+    </div>
+    <img src="balung.jpg" alt="Bebalung" class="w-full h-64 object-cover rounded">
+  </div>
+
+  <!-- KULINER 3 -->
+  <div class="bg-white rounded shadow-lg p-6 grid md:grid-cols-2 gap-6 items-center hover:scale-105 transition transform" data-aos="fade-up" data-aos-delay="200">
+    <img src="nasi.jpg" alt="Nasi Balap Puyung" class="w-full h-64 object-cover rounded">
+    <div>
+      <h2 class="text-2xl font-bold mb-2">Nasi Balap Puyung</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Nasi Balap Puyung adalah makanan khas Lombok dengan cita rasa pedas dan gurih. Terdiri dari nasi putih, ayam suwir pedas, kacang kedelai goreng, sambal, dan pelengkap lain seperti tempe atau telur. Awalnya berasal dari Desa Puyung di Lombok Tengah.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<!-- SCRIPT -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true });
+</script>
+
+</body>
+</html>

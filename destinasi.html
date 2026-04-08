@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinasi - Mataram</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav class="bg-blue-600 text-white p-4 fixed w-full top-0 z-50 shadow-md">
+  <div class="flex justify-between items-center max-w-6xl mx-auto">
+    <h1 class="font-bold text-xl">Mataram</h1>
+    <ul class="flex gap-4 text-sm">
+      <li><a href="index.html" class="hover:underline">Home</a></li>
+      <li><a href="destinasi.html" class="hover:underline font-semibold">Destinasi</a></li>
+      <li><a href="aktivitas.html" class="hover:underline">Aktivitas</a></li>
+      <li><a href="budaya.html" class="hover:underline">Budaya</a></li>
+      <li><a href="kuliner.html" class="hover:underline">Kuliner</a></li>
+      <li><a href="booking.html" class="hover:underline">Booking</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="pt-24"></div>
+
+<!-- JUDUL -->
+<section class="p-6 text-center" data-aos="fade-up" data-aos-duration="1200">
+  <h1 class="text-3xl md:text-4xl font-bold mb-2">Destinasi Wisata Mataram</h1>
+  <p class="text-gray-600 text-lg md:text-xl">Tempat wisata terbaik yang wajib dikunjungi</p>
+</section>
+
+<!-- DESTINASI -->
+<section class="max-w-6xl mx-auto p-6 space-y-8">
+
+  <!-- DESTINASI 1 -->
+  <div class="bg-white rounded shadow-lg p-6 grid md:grid-cols-2 gap-6 items-center hover:scale-105 transition transform" data-aos="fade-up">
+    <img src="senggigi.jpg" alt="Pantai Senggigi" class="w-full h-64 object-cover rounded">
+    <div>
+      <h2 class="text-2xl font-bold mb-2">Pantai Senggigi</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Pantai Senggigi adalah salah satu destinasi wisata paling terkenal di Pulau Lombok, Nusa Tenggara Barat, yang terletak sekitar 12 kilometer dari Kota Mataram. Pantai ini memiliki garis pantai yang panjang dengan pasir putih bercampur hitam, air laut yang jernih, serta ombak yang relatif tenang sehingga cocok untuk berenang, snorkeling, maupun berselancar ringan. Keindahan Senggigi semakin terasa saat matahari terbenam, karena panorama sunset di sini sering disebut sebagai salah satu yang terbaik di Lombok. Selain itu, kawasan Senggigi juga dilengkapi dengan berbagai fasilitas wisata seperti hotel, restoran, bar, dan pusat hiburan, menjadikannya pusat pariwisata modern sekaligus gerbang menuju destinasi lain seperti Gili Trawangan dan Gunung Rinjani.
+      </p>
+    </div>
+  </div>
+
+  <!-- DESTINASI 2 -->
+  <div class="bg-white rounded shadow-lg p-6 grid md:grid-cols-2 gap-6 items-center hover:scale-105 transition transform" data-aos="fade-up" data-aos-delay="100">
+    <div>
+      <h2 class="text-2xl font-bold mb-2">Gunung Rinjani</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Gunung Rinjani adalah gunung berapi aktif yang menjadi ikon Pulau Lombok sekaligus salah satu gunung tertinggi di Indonesia dengan ketinggian sekitar 3.726 meter di atas permukaan laut. Gunung ini terkenal dengan pemandangan alamnya yang spektakuler, mulai dari hutan tropis, padang savana, hingga kawah besar yang di dalamnya terdapat Danau Segara Anak berwarna biru kehijauan. Jalur pendakian Rinjani menawarkan pengalaman menantang sekaligus mempesona, dengan panorama sunrise dan sunset yang menakjubkan dari puncaknya.
+      </p>
+    </div>
+    <img src="basecamp.jpg" alt="Basecamp Rinjani" class="w-full h-64 object-cover rounded">
+  </div>
+
+  <!-- DESTINASI 3 -->
+  <div class="bg-white rounded shadow-lg p-6 grid md:grid-cols-2 gap-6 items-center hover:scale-105 transition transform" data-aos="fade-up" data-aos-delay="200">
+    <img src="taman.jpg" alt="Taman Udayana" class="w-full h-64 object-cover rounded">
+    <div>
+      <h2 class="text-2xl font-bold mb-2">Taman Udayana</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Taman Udayana adalah salah satu ruang terbuka hijau terbesar dan paling populer di Kota Mataram, Nusa Tenggara Barat, yang berfungsi sebagai pusat rekreasi, olahraga, kuliner, sekaligus memiliki nilai sejarah. Terletak di Jalan Udayana, Kecamatan Selaparang, taman ini selalu ramai dikunjungi warga maupun wisatawan karena aksesnya mudah dan gratis sepanjang hari.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<!-- SCRIPT -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true, // animasi hanya sekali saat scroll
+  });
+</script>
+
+</body>
+</html>

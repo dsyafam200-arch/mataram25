@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Mataram</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav class="bg-blue-600 text-white p-4 fixed w-full top-0 z-50 shadow-md">
+  <div class="flex justify-between items-center relative max-w-6xl mx-auto">
+    <h1 class="font-bold text-xl">Mataram</h1>
+
+    <!-- Hamburger -->
+    <button onclick="toggleMenu()" class="md:hidden text-2xl z-50">☰</button>
+
+    <!-- Menu -->
+    <ul id="menu" class="hidden absolute top-full left-0 w-full bg-blue-600 md:static md:flex md:w-auto md:gap-6 p-4 md:p-0 z-50">
+      <li><a href="home.html" class="hover:underline">Home</a></li>
+      <li><a href="destinasi.html" class="hover:underline">Destinasi</a></li>
+      <li><a href="aktivitas.html" class="hover:underline">Aktivitas</a></li>
+      <li><a href="budaya.html" class="hover:underline">Budaya</a></li>
+      <li><a href="kuliner.html" class="hover:underline">Kuliner</a></li>
+      <li><a href="perencana.html" class="hover:underline">Perencana</a></li>
+      <li><a href="maps.html" class="hover:underline">Maps</a></li>
+      <li><a href="akomodasi.html" class="hover:underline">Akomodasi</a></li>
+      <li><a href="keberlanjutan.html" class="hover:underline">Keberlanjutan</a></li>
+      <li><a href="bantuan.html" class="hover:underline">Bantuan</a></li>
+      <li><a href="booking.html" class="hover:underline">Booking</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="pt-24"></div>
+
+<!-- HERO -->
+<section class="bg-cover bg-center h-[450px] flex items-center justify-center text-white relative" style="background-image: url('home.jpg');" data-aos="fade-up" data-aos-duration="1500">
+  <div class="bg-black/50 p-6 rounded-xl text-center animate-fadeIn">
+    <h1 class="text-3xl md:text-5xl font-bold mb-2">Explore Kota Mataram</h1>
+    <p class="text-lg md:text-2xl">Keindahan alam, budaya, dan kuliner Lombok</p>
+  </div>
+</section>
+
+<!-- DESKRIPSI -->
+<section class="p-6 text-center max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1200">
+  <h2 class="text-2xl font-bold mb-3">Tentang Mataram</h2>
+  <p class="text-gray-700 leading-relaxed">
+    Mataram adalah ibu kota Provinsi Nusa Tenggara Barat yang terletak di Pulau Lombok, sekaligus menjadi pusat pemerintahan, ekonomi, dan budaya di wilayah tersebut. Kota ini memiliki populasi lebih dari 400 ribu jiwa dan dikenal sebagai pintu gerbang utama menuju destinasi wisata populer seperti Senggigi, Gili Trawangan, dan Gunung Rinjani. Selain itu, nama Mataram juga merujuk pada Kerajaan Mataram Kuno di Jawa yang berjaya pada abad ke-8 hingga ke-11, dengan peninggalan monumental berupa Candi Borobudur dan Prambanan, menjadikannya penting baik dalam konteks modern maupun sejarah Nusantara.
+  </p>
+</section>
+
+<!-- VIDEO KEINDAHAN -->
+<section class="relative w-full h-[500px] overflow-hidden mt-6" data-aos="fade-up" data-aos-duration="1200">
+  <video autoplay loop controls class="absolute w-full h-full object-cover rounded-lg shadow-lg">
+    <source src="keindahan.mp4" type="video/mp4">
+    Browser kamu tidak mendukung video.
+  </video>
+</section>
+
+<!-- KEUNGGULAN -->
+<section class="p-6 mt-6" data-aos="fade-up" data-aos-duration="1200">
+  <div class="grid md:grid-cols-3 gap-6 text-center max-w-6xl mx-auto">
+    
+    <div class="bg-white p-6 shadow-lg rounded-xl hover:scale-105 transition transform">
+      <div class="text-3xl mb-2">🌊</div>
+      <h3 class="font-bold text-xl mb-1">Pantai Indah</h3>
+      <p>Senggigi & Gili terkenal</p>
+    </div>
+
+    <div class="bg-white p-6 shadow-lg rounded-xl hover:scale-105 transition transform">
+      <div class="text-3xl mb-2">🏛️</div>
+      <h3 class="font-bold text-xl mb-1">Budaya</h3>
+      <p>Tradisi Sasak unik</p>
+    </div>
+
+    <div class="bg-white p-6 shadow-lg rounded-xl hover:scale-105 transition transform">
+      <div class="text-3xl mb-2">🍜</div>
+      <h3 class="font-bold text-xl mb-1">Kuliner</h3>
+      <p>Ayam Taliwang lezat</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SCRIPT -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("hidden");
+}
+</script>
+<!-- Footer -->
+<footer class="bg-gray-900 text-center py-4 text-gray-400 text-sm mt-12">
+  &copy; Dewi Syafa Maulida, est 2026, all rights reserved
+</footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Akomodasi - Mataram</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav class="bg-blue-600 text-white p-4">
+  <div class="flex flex-wrap gap-3 text-sm">
+    <a href="./index.html">Home</a>
+    <a href="./destinasi.html">Destinasi</a>
+    <a href="./aktivitas.html">Aktivitas</a>
+    <a href="./akomodasi.html">Akomodasi</a>
+  </div>
+</nav>
+
+<!-- JUDUL -->
+<section class="p-6 text-center">
+  <h1 class="text-3xl font-bold">Akomodasi</h1>
+  <p class="text-gray-600">Tempat menginap terbaik di Mataram</p>
+</section>
+
+<!-- HOTEL 1 -->
+<section class="p-6 bg-white m-4 rounded shadow cursor-pointer" onclick="toggleHotel1()">
+  <div class="grid md:grid-cols-2 gap-4 items-center">
+
+    <img src="beachbum.jpeg"
+         class="w-full h-64 object-cover rounded">
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Hotel Gili Beach Bum</h2>
+      <p>Gili Beach Bum Hostel	Gili Trawangan	± Rp 110.000 (USD 7)	Hostel populer untuk backpacker</p>
+
+      <div id="hotel1" class="hidden mt-2 text-sm text-gray-600">
+        ✔ Kolam renang  
+        ✔ WiFi gratis  
+        ✔ Dekat tempat wisata  
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOTEL 2 -->
+<section class="p-6 bg-white m-4 rounded shadow cursor-pointer" onclick="toggleHotel2()">
+  <div class="grid md:grid-cols-2 gap-4 items-center">
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Grand Senggigi Hotel</h2>
+      <p>Grand Senggigi Hotel, Lombok	± Rp 400.000	Hotel nyaman dekat pantai</p>
+
+      <div id="hotel2" class="hidden mt-2 text-sm text-gray-600">
+        ✔ View pantai  
+        ✔ Spa & restoran  
+        ✔ Cocok untuk liburan  
+      </div>
+    </div>
+
+    <img src="grandsenggigi.jpeg"
+         class="w-full h-64 object-cover rounded">
+
+  </div>
+</section>
+
+<!-- HOTEL 3 -->
+<section class="p-6 bg-white m-4 rounded shadow cursor-pointer" onclick="toggleHotel3()">
+  <div class="grid md:grid-cols-2 gap-4 items-center">
+
+    <img src="lara.jpeg"
+         class="w-full h-64 object-cover rounded">
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Lara Homestay</h2>
+      <p>Lara Homestay	Lombok Tengah	± Rp 169.000	Homestay murah dengan ulasan bagus</p>
+
+      <div id="hotel3" class="hidden mt-2 text-sm text-gray-600">
+        ✔ Harga terjangkau  
+        ✔ Suasana tradisional  
+        ✔ Dekat desa wisata  
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SCRIPT -->
+<script>
+function toggleHotel1() {
+  document.getElementById("hotel1").classList.toggle("hidden");
+}
+
+function toggleHotel2() {
+  document.getElementById("hotel2").classList.toggle("hidden");
+}
+
+function toggleHotel3() {
+  document.getElementById("hotel3").classList.toggle("hidden");
+}
+</script>
+
+</body>
+</html>
